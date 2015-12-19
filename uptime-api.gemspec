@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'uptime/api/version'
+require 'uptime/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "uptime-api"
-  spec.version       = Uptime::Api::VERSION
+  spec.name          = "uptime"
+  spec.version       = Uptime::VERSION
   spec.authors       = ["mohitsethi"]
   spec.email         = ["mohit@sethis.in"]
 
@@ -21,5 +21,6 @@ Gem::Specification.new do |spec|
 
   spec.add_development_dependency "bundler", "~> 1.10"
   spec.add_development_dependency "rake", "~> 10.0"
-  spec.add_dependency "rest_client", "~> 1.8.3"
+  spec.add_dependency "rest-client"
+  spec.add_dependency "gem_config"
 end
