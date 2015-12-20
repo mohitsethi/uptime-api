@@ -9,9 +9,9 @@ Gem::Specification.new do |spec|
   spec.authors       = ["mohitsethi"]
   spec.email         = ["mohit@sethis.in"]
 
-  spec.summary       = "Helps with Uptime-API"
-  spec.description   = "Helps with Uptime-API"
-  spec.homepage      = "https://github.com/mohitsethi/uptime-api.git"
+  spec.summary       = "Ruby client library to work with Uptime"
+  spec.description   = "Ruby client library to work with Uptime"
+  spec.homepage      = "https://github.com/mohitsethi/uptime.git"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0").reject { |f| f.match(%r{^(test|spec|features)/}) }

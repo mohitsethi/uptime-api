@@ -1,15 +1,14 @@
-# Uptime::Api
+# Uptime
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/uptime/api`. To experiment with that code, run `bin/console` for an interactive prompt.
+Ruby client library to work with [Uptime](https://github.com/fzaninotto/uptime)
 
-TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'uptime-api'
+gem 'uptime'
 ```
 
 And then execute:
@@ -18,11 +17,21 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install uptime-api
+    $ gem install uptime
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+#!/usr/bin/env ruby
+
+require 'uptime'
+
+Uptime.configure do |config|
+  config.api_endpoint = 'http://<your-ip>:<your-port>/'
+  config.username = '<username>'
+  config.password = '<password>'
+end
+```
 
 ## Development
 
