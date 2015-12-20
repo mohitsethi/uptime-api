@@ -2,23 +2,24 @@ require 'uptime/call'
 
 module Uptime
   class Checks
+    self.resource = "api/checks"
     # attr_accessor :username, :password
 
     def self.all(filter={})
-      response = Uptime::Call.execute("api/checks", :get)
+      response = Uptime::Call.execute(self.resource, :get)
     end
 
     def self.create(options={})
-      Uptime::Call.execute("api/checks", :put, options)
+      Uptime::Call.execute(self.resource, :put, options)
     end
 
 
     def self.delete(check_id)
-      Uptime::Call.execute("api/checks#{check_id}", :delete)
+      Uptime::Call.execute("#{self.resource}/#{check_id}", :delete)
     end
 
     def self.update(check_id, options={})
-      Uptime::Call.execute("api/checks#{check_id}", :post, options)
+      Uptime::Call.execute("#{self.resource}/#{check_id}", :post, options)
     end
 
   end
